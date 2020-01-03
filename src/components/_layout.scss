@@ -620,3 +620,122 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.home-pic-mobile {
+  width: 100%;
+  margin: auto;
+  @include breakpoint(l) {
+    display: none;
+  }
+}
+
+.flex {
+  display: block;
+  @include breakpoint(l) {
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    margin: auto;
+  }
+  @include breakpoint(xxl) {
+    width: 64%;
+  }
+}
+.home-pic {
+  filter: grayscale(20%);
+  display: none;
+  @include breakpoint(l) {
+    display: block;
+  }
+}
+
+.card1 {
+  width: 100%;
+  margin: auto;
+  @include breakpoint(l) {
+    width: 40%;
+  }
+}
+
+.card2 {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 5px;
+  @include breakpoint(l) {
+    width: 40%;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column-reverse;
+  @include breakpoint(l) {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: row;
+
+    img {
+      margin: 20px;
+    }
+  }
+}
+
+.card-recto {
+  position: absolute;
+  flex: 0 0 40%;
+  right: 50%;
+  top: 100px;
+}
+
+.card-verso {
+  position: absolute;
+  top: 50px;
+  right: 15%;
+  z-index: 2;
+}
+
+.visit {
+  width: 80%;
+  position: relative;
+  display: none;
+  @include breakpoint(l) {
+    display: block;
+  }
+}
+
+.card-mobile {
+  width: 100%;
+  margin-top: 10px;
+  @include breakpoint(l) {
+    display: none;
+  }
+}
+
+.card-mobile2 {
+  width: 100%;
+  @include breakpoint(l) {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+  /* Styles pour cette Media Queries */
+
+  .turn {
+    width: 110%;
+    height: 120vh;
+    z-index: 3;
+    position: absolute;
+    background: black;
+    color: white;
+    top: -10px;
+    left: -10px;
+    display: block;
+    p {
+      margin: auto;
+      width: 300px;
+      margin-top: 45%;
+    }
+  }
+}
