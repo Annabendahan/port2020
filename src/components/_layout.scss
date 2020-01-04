@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&display=swap");
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5,6 +7,7 @@ html {
 }
 body {
   margin: 0;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -204,6 +207,7 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
+  overflow: hidden;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -647,11 +651,58 @@ pre tt:after {
   @include breakpoint(l) {
     display: block;
   }
+  &:hover {
+    transform: scale(0.97);
+  }
+}
+.card11 {
+  width: 100%;
+  background: #f1f1f1;
+  font-family: "Work Sans", sans-serif;
+  padding: 20px;
+  height: 777px;
+  color: black;
+
+  @include breakpoint(l) {
+    width: 328px;
+  }
+  h3 {
+    text-align: right;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  p {
+    text-transform: lowercase;
+    font-size: 15px;
+    text-align: justify;
+    letter-spacing: 0em;
+  }
+  a {
+    text-decoration: none;
+    margin-bottom: 2px;
+
+    color: black;
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+.el {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  p {
+    margin-bottom: 10px;
+  }
 }
 
 .card1 {
   width: 100%;
   margin: auto;
+
   @include breakpoint(l) {
     width: 40%;
   }
@@ -677,6 +728,14 @@ pre tt:after {
 
     img {
       margin: 20px;
+      &:hover {
+        transform: scale(1.08);
+      }
+    }
+    div {
+      &:hover {
+        transform: scale(1.08);
+      }
     }
   }
 }
@@ -696,7 +755,24 @@ pre tt:after {
 }
 
 .visit {
-  width: 80%;
+  &:hover {
+    transform: scale(1.08);
+    .card-recto {
+      right: 52%;
+    }
+    .card-verso {
+      right: 8%;
+    }
+  }
+}
+
+main {
+  @include breakpoint(l) {
+    overflow: hidden;
+  }
+}
+
+.visit {
   position: relative;
   display: none;
   @include breakpoint(l) {
@@ -736,6 +812,27 @@ pre tt:after {
       margin: auto;
       width: 300px;
       margin-top: 45%;
+      font-family: "Work Sans", sans-serif;
     }
+  }
+}
+
+.landing {
+  position: fixed;
+  overflow: hidden;
+  top: 0px;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  background: black;
+  color: white;
+  top: 0px;
+  display: block;
+  p {
+    margin: auto;
+    width: 300px;
+    margin-top: 20%;
+    font-family: "Work Sans", sans-serif;
   }
 }
